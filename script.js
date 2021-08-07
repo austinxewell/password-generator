@@ -63,3 +63,17 @@ const randomFunc = {
         }   
        
        //console.log(randomFunc.lower())
+       
+      for (let i = 0; i < passwordLength; i++) {
+        var funcName = Object.keys(typesArr[Math.floor(Math.random() * typesArr.length)])[0]
+
+      //console.log((randomFunc[funcName]()));
+
+
+        generatedPassword += (randomFunc[funcName]())
+    }
+
+    console.log(generatedPassword)
+    document.getElementById('password').innerHTML = generatedPassword;
+  }
+}
